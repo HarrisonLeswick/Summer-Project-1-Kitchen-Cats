@@ -11011,3 +11011,11 @@ Logs/shadercompiler-UnityShaderCompiler.exe0.log
 Packages/manifest.json
 Packages/packages-lock.json
 UserSettings/EditorUserSettings.asset
+
+Library/
+
+Logs/
+
+Temp/
+
+Kitchen Kats.sln
