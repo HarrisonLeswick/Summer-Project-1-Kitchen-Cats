@@ -8,8 +8,10 @@ public class breadPatter : MonoBehaviour
     public Sprite bodySprite;
     public Sprite leftSprite;
     public Sprite rightSprite;
+    public Bank bank;
     private bool leftPat = true;
     private int patCooldown = 0;
+    public int value;
 
     void Update()
     {
@@ -26,18 +28,24 @@ public class breadPatter : MonoBehaviour
             gameObject.GetComponent<SpriteRenderer>().sprite = leftSprite;
             leftPat = false;
         }
-        else if (leftPat == false)
+        else
         {
             gameObject.GetComponent<SpriteRenderer>().sprite = rightSprite;
             leftPat = true;
         }
         patCooldown = 600;
+        bank.AddBread(value);
     }
 
     private void returnToNormal()
     {
         gameObject.GetComponent<SpriteRenderer>().sprite = bodySprite;
         leftPat = true;
+    }
+
+    public void Upgrade()
+    {
+        value *= 2;
     }
 
 }
