@@ -11014,9 +11014,9 @@ UserSettings/EditorUserSettings.asset
 
 Library/
 
-/Library/
+./Library/
 
-/Logs/
+./Logs/
 
 Logs/
 
