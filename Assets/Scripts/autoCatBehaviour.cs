@@ -11,6 +11,7 @@ public class autoCatBehaviour : MonoBehaviour
         Afraid
     }
 
+    public Animator animator;
     public CatState catState = CatState.Asleep;
     public string catName;
     public int breadPerPat;
