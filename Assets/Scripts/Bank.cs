@@ -6,7 +6,8 @@ using TMPro;
 public class Bank : MonoBehaviour
 {
 
-    public int bread = 0;
+    public float bread = 0;
+    public float displayedBread = 0;
     public TextMeshProUGUI text;
 
 
@@ -19,24 +20,25 @@ public class Bank : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        displayedBread = bread;
+        displayedBread = Mathf.FloorToInt(displayedBread);
+        text.text = "Bread: " + displayedBread.ToString();
 
-        text.text = "Bread: " + bread.ToString();
+        //if (Input.GetKeyDown(KeyCode.A))
+        //{
+        //    print("space key was pressed");
+        //    Debug.Log(bread);
+        //}
 
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            print("space key was pressed");
-            Debug.Log(bread);
-        }
-
-        if (Input.GetKeyDown(KeyCode.B))
-        {
-            AddBread(10);
-            Debug.Log(bread);
-        }
+        //if (Input.GetKeyDown(KeyCode.B))
+        //{
+        //    AddBread(10);
+        //    Debug.Log(bread);
+        //}
 
     }
 
-    public void AddBread(int amount)
+    public void AddBread(float amount)
     {
         bread += amount;
     }

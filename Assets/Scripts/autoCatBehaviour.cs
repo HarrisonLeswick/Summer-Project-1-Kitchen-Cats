@@ -81,7 +81,7 @@ public class autoCatBehaviour : MonoBehaviour
 
     void AutoBreadPat()
     {
-        breadBank.AddBread(breadPerPat);
+        breadBank.AddBread(breadPerPat * Time.deltaTime);
     }
 
     void AutoSalami()

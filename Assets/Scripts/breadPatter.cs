@@ -43,9 +43,4 @@ public class breadPatter : MonoBehaviour
         leftPat = true;
     }
 
-    public void Upgrade()
-    {
-        value *= 2;
-    }
-
 }
