@@ -240,7 +240,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 177}
+  m_AnchoredPosition: {x: 0, y: 90}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &657394778
@@ -297,7 +297,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -326,7 +326,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -482.74487, y: 0, z: -476.97253, w: -0.7095642}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -352,6 +352,7 @@ GameObject:
   - component: {fileID: 742084656}
   - component: {fileID: 742084655}
   - component: {fileID: 742084654}
+  - component: {fileID: 742084657}
   m_Layer: 0
   m_Name: Krakitten
   m_TagString: Untagged
@@ -371,7 +372,7 @@ Transform:
   m_LocalScale: {x: 0.35, y: 0.35, z: 0.5}
   m_Children: []
   m_Father: {fileID: 1750421726}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &742084654
 MonoBehaviour:
@@ -385,11 +386,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdbde579d56836647b2a669f50f4e8d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
+  animator: {fileID: 742084657}
+  isAsleep: 1
   catState: 0
-  catName: 
-  breadPerPat: 0
-  breadBank: {fileID: 0}
+  catName: Krakitten
+  breadPerPat: 10
+  breadBank: {fileID: 1733882704}
 --- !u!61 &742084655
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -467,6 +469,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &742084657
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 742084652}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 451d51814922d9c43b7bac4b1519bc1f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &757778752
 GameObject:
   m_ObjectHideFlags: 0
@@ -708,6 +729,7 @@ GameObject:
   - component: {fileID: 1255143456}
   - component: {fileID: 1255143455}
   - component: {fileID: 1255143454}
+  - component: {fileID: 1255143457}
   m_Layer: 0
   m_Name: Mister Whiskers
   m_TagString: Untagged
@@ -727,7 +749,7 @@ Transform:
   m_LocalScale: {x: 0.35, y: 0.35, z: 0.5}
   m_Children: []
   m_Father: {fileID: 1750421726}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1255143454
 MonoBehaviour:
@@ -741,11 +763,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdbde579d56836647b2a669f50f4e8d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
+  animator: {fileID: 1255143457}
+  isAsleep: 1
   catState: 0
-  catName: 
-  breadPerPat: 0
-  breadBank: {fileID: 0}
+  catName: Mr. Whiskers
+  breadPerPat: 1
+  breadBank: {fileID: 1733882704}
 --- !u!61 &1255143455
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -823,6 +846,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1255143457
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1255143452}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 451d51814922d9c43b7bac4b1519bc1f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1298221431
 GameObject:
   m_ObjectHideFlags: 0
@@ -835,7 +877,7 @@ GameObject:
   - component: {fileID: 1298221434}
   - component: {fileID: 1298221433}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: upgradeBreadText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -850,7 +892,7 @@ RectTransform:
   m_GameObject: {fileID: 1298221431}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 2044937869}
   m_RootOrder: 0
@@ -880,7 +922,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: UPGRADE
+  m_text: 'UPGRADE:
+
+    200'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -986,8 +1030,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b84cc39aedd7eae459802539d3fbf098, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  patter: {fileID: 757778755}
   breadBank: {fileID: 1733882704}
   cats: {fileID: 1750421727}
+  purchaseText: {fileID: 1480396398}
+  upgradeText: {fileID: 1298221433}
 --- !u!4 &1337107451
 Transform:
   m_ObjectHideFlags: 0
@@ -1002,54 +1049,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1404588312
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1404588313}
-  - component: {fileID: 1404588314}
-  m_Layer: 0
-  m_Name: auto cat 1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1404588313
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1404588312}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1750421726}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1404588314
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1404588312}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cdbde579d56836647b2a669f50f4e8d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 0}
-  catState: 0
-  catName: Cinder
-  breadPerPat: 1
-  breadBank: {fileID: 1733882704}
 --- !u!1 &1480396396
 GameObject:
   m_ObjectHideFlags: 0
@@ -1062,7 +1061,7 @@ GameObject:
   - component: {fileID: 1480396399}
   - component: {fileID: 1480396398}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: purchaseCatText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1077,7 +1076,7 @@ RectTransform:
   m_GameObject: {fileID: 1480396396}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 1772354544}
   m_RootOrder: 0
@@ -1107,7 +1106,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: BUY CAT
+  m_text: "Hire Nemo: \n300 "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1196,6 +1195,7 @@ GameObject:
   - component: {fileID: 1629637408}
   - component: {fileID: 1629637407}
   - component: {fileID: 1629637406}
+  - component: {fileID: 1629637409}
   m_Layer: 0
   m_Name: Gracie
   m_TagString: Untagged
@@ -1215,7 +1215,7 @@ Transform:
   m_LocalScale: {x: 0.35, y: 0.35, z: 0.5}
   m_Children: []
   m_Father: {fileID: 1750421726}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1629637406
 MonoBehaviour:
@@ -1229,11 +1229,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdbde579d56836647b2a669f50f4e8d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
+  animator: {fileID: 1629637409}
+  isAsleep: 1
   catState: 0
-  catName: 
-  breadPerPat: 0
-  breadBank: {fileID: 0}
+  catName: Gracie
+  breadPerPat: 1
+  breadBank: {fileID: 1733882704}
 --- !u!61 &1629637407
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1311,6 +1312,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1629637409
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1629637404}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 451d51814922d9c43b7bac4b1519bc1f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1733882702
 GameObject:
   m_ObjectHideFlags: 0
@@ -1355,6 +1375,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bread: 0
+  displayedBread: 0
   text: {fileID: 657394778}
 --- !u!1 &1750421725
 GameObject:
@@ -1384,7 +1405,6 @@ Transform:
   m_LocalPosition: {x: 0, y: 2.76, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1404588313}
   - {fileID: 1932098233}
   - {fileID: 1629637405}
   - {fileID: 1938721468}
@@ -1406,7 +1426,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cats:
-  - {fileID: 1404588314}
+  - {fileID: 1932098235}
+  - {fileID: 1629637406}
+  - {fileID: 1938721469}
+  - {fileID: 1255143454}
+  - {fileID: 742084654}
   autoCatCount: 0
 --- !u!1 &1772354543
 GameObject:
@@ -1436,7 +1460,7 @@ RectTransform:
   m_GameObject: {fileID: 1772354543}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 3.5, z: 1}
   m_Children:
   - {fileID: 1480396397}
   m_Father: {fileID: 802965586}
@@ -1444,7 +1468,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -303, y: -158}
+  m_AnchoredPosition: {x: -303, y: -170}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1772354545
@@ -1573,7 +1597,7 @@ Transform:
   m_LocalScale: {x: 0.35, y: 0.35, z: 0.5}
   m_Children: []
   m_Father: {fileID: 1750421726}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1932098234
 Animator:
@@ -1607,10 +1631,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1932098234}
+  isAsleep: 1
   catState: 0
-  catName: 
-  breadPerPat: 0
-  breadBank: {fileID: 0}
+  catName: Nemo
+  breadPerPat: 1
+  breadBank: {fileID: 1733882704}
 --- !u!61 &1932098236
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1700,6 +1725,7 @@ GameObject:
   - component: {fileID: 1938721471}
   - component: {fileID: 1938721470}
   - component: {fileID: 1938721469}
+  - component: {fileID: 1938721472}
   m_Layer: 0
   m_Name: Dan
   m_TagString: Untagged
@@ -1719,7 +1745,7 @@ Transform:
   m_LocalScale: {x: 0.35, y: 0.35, z: 0.5}
   m_Children: []
   m_Father: {fileID: 1750421726}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1938721469
 MonoBehaviour:
@@ -1733,11 +1759,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdbde579d56836647b2a669f50f4e8d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
+  animator: {fileID: 1938721472}
+  isAsleep: 1
   catState: 0
-  catName: 
-  breadPerPat: 0
-  breadBank: {fileID: 0}
+  catName: Dan
+  breadPerPat: 1
+  breadBank: {fileID: 1733882704}
 --- !u!61 &1938721470
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1815,6 +1842,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1938721472
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1938721467}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 451d51814922d9c43b7bac4b1519bc1f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1953783963
 GameObject:
   m_ObjectHideFlags: 0
@@ -1909,7 +1955,7 @@ RectTransform:
   m_GameObject: {fileID: 2044937868}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 3.5, z: 1}
   m_Children:
   - {fileID: 1298221432}
   m_Father: {fileID: 802965586}
@@ -1964,9 +2010,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 757778755}
-        m_TargetAssemblyTypeName: breadPatter, Assembly-CSharp
-        m_MethodName: Upgrade
+      - m_Target: {fileID: 1337107450}
+        m_TargetAssemblyTypeName: catShop, Assembly-CSharp
+        m_MethodName: UpgradeCat
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
