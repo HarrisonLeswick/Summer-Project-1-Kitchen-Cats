@@ -78,6 +78,13 @@ public class autoCatBehaviour : MonoBehaviour
             print(catName + " is SpookedTM!");
         }
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (gameObject.CompareTag(other.tag))
+        {
+            Debug.Log("ahahahha");
+        }
+    }
 
     void AutoBreadPat()
     {
