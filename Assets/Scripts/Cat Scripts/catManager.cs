@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class catManager : MonoBehaviour
 {
-    public autoCatBehaviour[] cats;
+    public AutoCatBehaviour[] cats;
     public int autoCatCount = 0;
 
     private int maxCats;

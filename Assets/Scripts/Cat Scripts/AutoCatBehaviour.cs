@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class autoCatBehaviour : MonoBehaviour
+public class AutoCatBehaviour : MonoBehaviour
 {
     public enum CatState
     {
@@ -93,7 +93,7 @@ public class autoCatBehaviour : MonoBehaviour
 
     void AutoSalami()
     {
-        breadBank.AddBread(breadPerPat * 2);
+        breadBank.AddBread(breadPerPat * 2 * Time.deltaTime);
     }
 
 
