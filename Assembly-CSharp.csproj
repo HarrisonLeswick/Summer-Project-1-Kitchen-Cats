@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>8.0</LangVersion>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -47,23 +47,24 @@
   <PropertyGroup>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <UnityProjectGenerator>Package</UnityProjectGenerator>
-    <UnityProjectGeneratorVersion>2.0.8</UnityProjectGeneratorVersion>
+    <UnityProjectGeneratorVersion>2.0.11</UnityProjectGeneratorVersion>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
     <UnityVersion>2020.3.18f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Assets\Scripts\ShopAnimScript.cs" />
-    <Compile Include="Assets\Scripts\breadPatter.cs" />
-    <Compile Include="Assets\Scripts\catShop.cs" />
-    <Compile Include="Assets\Scripts\autoCatBehaviour.cs" />
-    <Compile Include="Assets\Scripts\catManager.cs" />
-    <Compile Include="Assets\Scripts\Bank.cs" />
-    <Compile Include="Assets\Scripts\DragDrop.cs" />
-    <Compile Include="Assets\Scripts\ItemSlot.cs" />
+    <Compile Include="Assets\Scripts\Shop Scripts\ShopAnimScript.cs" />
+    <Compile Include="Assets\Scripts\Genera UI Scripts\DragDropCanvas.cs" />
+    <Compile Include="Assets\Scripts\Cat Scripts\breadPatter.cs" />
+    <Compile Include="Assets\Scripts\Genera UI Scripts\ItemSlot.cs" />
+    <Compile Include="Assets\Scripts\Extra Scripts\DragDropScene.cs" />
+    <Compile Include="Assets\Scripts\Shop Scripts\catShop.cs" />
+    <Compile Include="Assets\Scripts\Cat Scripts\AutoCatBehaviour.cs" />
+    <Compile Include="Assets\Scripts\Cat Scripts\catManager.cs" />
+    <Compile Include="Assets\Scripts\Shop Scripts\Bank.cs" />
+    <Compile Include="Assets\Scripts\Genera UI Scripts\SalamiDrop.cs" />
+    <Compile Include="Assets\Scripts\Genera UI Scripts\CucumberManager.cs" />
+    <Compile Include="Assets\Scripts\Genera UI Scripts\CucumberSpawner.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -310,9 +311,6 @@
     </Reference>
     <Reference Include="UnityEditor.UnityConnectModule">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@2.0.0\Runtime\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\ref\2.0.0\netstandard.dll</HintPath>

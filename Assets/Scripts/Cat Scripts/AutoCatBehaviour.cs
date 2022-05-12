@@ -16,7 +16,8 @@ public class AutoCatBehaviour : MonoBehaviour
     public CatState catState = CatState.Active;
     public string catName;
     public int breadPerPat;
-
+    public bool beenCucumbered = false;
+    public bool hasSalami = false;
     public Bank breadBank;
 
     // Start is called before the first frame update
@@ -62,6 +63,27 @@ public class AutoCatBehaviour : MonoBehaviour
 
     void UpdateCatState()
     {
+        if (beenCucumbered)
+        {
+            if (catState != CatState.Afraid)
+            {
+                catState = CatState.Afraid;
+                print(catName + " is Spooked!");
+            }
+        }else if (hasSalami)
+        {
+            if (catState != CatState.Salami)
+            {
+                catState = CatState.Salami;
+                print(catName + " is FUELED BY SALAMI");
+            }
+        }else if (catState != CatState.Active)
+        {
+            catState = CatState.Active;
+            print(catName + " exists i guess");
+        }
+
+
         if (Input.GetKeyDown(KeyCode.R) && catState != CatState.Active)//replace with normal state condition
         {
             catState = CatState.Active;
