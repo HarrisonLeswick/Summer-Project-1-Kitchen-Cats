@@ -7,11 +7,15 @@ public class catShop : MonoBehaviour
 {
     public breadPatter patter;
     public Bank breadBank;
+    public StickerStuff stickerSpawner;
     private int catPrice = 300;
     private int upgradePrice = 2;
+    private int stickerPrice = 5;
     public catManager cats;
     public TextMeshProUGUI purchaseText;
     public TextMeshProUGUI upgradeText;
+    public TextMeshProUGUI stickerText;
+    
 
 
     // Start is called before the first frame update
@@ -58,4 +62,15 @@ public class catShop : MonoBehaviour
             upgradeText.text = "UPGRADE:\n" + upgradePrice.ToString();
         }
     }
+
+    public void BuySticker()
+    {
+        if (breadBank.bread >= stickerPrice)
+        {
+            breadBank.bread -= stickerPrice;
+            stickerText.text = "Buy Sticker:\n" + stickerPrice.ToString();
+            stickerSpawner.SpawnSticker();
+        }
+    }
+
 }
