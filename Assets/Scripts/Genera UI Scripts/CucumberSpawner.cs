@@ -6,9 +6,11 @@ public class CucumberSpawner : MonoBehaviour
 {
     public catManager autoCats;
     public GameObject cucumberPrefab;
-    private float x = 0.0F;
-    private float y = 0.0F;
+
     private AutoCatBehaviour chosenCat;
+    private int temp;
+
+    private Vector2[] coords = { new Vector2(-299,-135), new Vector2(-351, 50), new Vector2(-6,139), new Vector2(343,50), new Vector2(288, -129) };
 
     // Start is called before the first frame update
     void Start()
@@ -36,10 +38,11 @@ public class CucumberSpawner : MonoBehaviour
     {
         GameObject newCucumber = Instantiate(
             cucumberPrefab, 
-            new Vector2(x, y),
+            new Vector3(0, 0, 0),
             Quaternion.identity,
             transform);
         newCucumber.name = "Cucumber";
+        newCucumber.GetComponent<RectTransform>().anchoredPosition = coords[temp];
         newCucumber.GetComponent<CucumberManager>().targetCat = chosenCat;
   
     }
@@ -49,19 +52,22 @@ public class CucumberSpawner : MonoBehaviour
     {
         int catsChecked = 0;
         int max = autoCats.autoCatCount;
+
+
+        temp = Random.Range(0, max);
+
+        chosenCat = autoCats.cats[temp].GetComponent<AutoCatBehaviour>();
         
-        chosenCat = autoCats.cats[Random.Range(0, max)].GetComponent<AutoCatBehaviour>();
         while (chosenCat.beenCucumbered && catsChecked < max)
         {
-            chosenCat = autoCats.cats[Random.Range(0, max)].GetComponent<AutoCatBehaviour>();
+            temp = Random.Range(0, max);
+            chosenCat = autoCats.cats[temp].GetComponent<AutoCatBehaviour>();
             catsChecked++;
         }
         
         if (!chosenCat.beenCucumbered)
         {
             chosenCat.beenCucumbered = true;
-            x = (chosenCat.transform.position.x);
-            y = (chosenCat.transform.position.y - 0.5F);
             CreateCucumber();
         }
         

@@ -30,6 +30,7 @@ public class AutoCatBehaviour : MonoBehaviour
     void Update()
     {
         if (!isAsleep) { UpdateCatState(); }
+        
 
         if(catState == CatState.Active && !isAsleep)
         {
