@@ -24,9 +24,11 @@ public class catManager : MonoBehaviour
     public void NewAutoCat()
     {
         cats[autoCatCount].isAsleep = false;
+        cats[autoCatCount].breadStart();
         cats[autoCatCount].animator.SetBool("wasPurchased", true);
         autoCatCount++;
-        
+
+
     }
 
     public bool CanPurchaseCat()

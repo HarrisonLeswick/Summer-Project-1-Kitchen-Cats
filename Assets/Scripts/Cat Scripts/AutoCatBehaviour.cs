@@ -19,11 +19,14 @@ public class AutoCatBehaviour : MonoBehaviour
     public bool beenCucumbered = false;
     public bool hasSalami = false;
     public Bank breadBank;
+    private ParticleSystem breadParticles;
 
     // Start is called before the first frame update
     void Start()
     {
         StartupDebug();
+        breadParticles = GetComponentInChildren<ParticleSystem>();
+
     }
 
     // Update is called once per frame
@@ -126,5 +129,10 @@ public class AutoCatBehaviour : MonoBehaviour
         {
             animator.SetInteger("States", (int)catState);
         }
+    }
+
+    public void breadStart()
+    {
+        breadParticles.Play();
     }
 }

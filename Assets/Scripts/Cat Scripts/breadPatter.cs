@@ -12,7 +12,12 @@ public class breadPatter : MonoBehaviour
     private bool leftPat = true;
     private int patCooldown = 0;
     public int value;
+    private ParticleSystem breadParticles;
 
+    private void Start()
+    {
+        breadParticles = GetComponentInChildren<ParticleSystem>();
+    }
     void Update()
     {
         if (patCooldown == 0)
@@ -35,12 +40,15 @@ public class breadPatter : MonoBehaviour
         }
         patCooldown = 600;
         bank.AddBread(value);
+
+        breadParticles.Play();
     }
 
     private void returnToNormal()
     {
         gameObject.GetComponent<SpriteRenderer>().sprite = bodySprite;
         leftPat = true;
+        breadParticles.Stop();
     }
 
 }
