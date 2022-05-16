@@ -1049,7 +1049,7 @@ Animator:
   m_GameObject: {fileID: 742084652}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 451d51814922d9c43b7bac4b1519bc1f, type: 2}
+  m_Controller: {fileID: 9100000, guid: f376576de9bb22041913ed4c237411ff, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1187,8 +1187,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bodySprite: {fileID: 21300000, guid: d697ffc4aa4c615419a74c84c375600c, type: 3}
-  leftSprite: {fileID: 21300000, guid: e53899609bc10c949874cc2f13bb6431, type: 3}
-  rightSprite: {fileID: 21300000, guid: a9df6e6f88b4c014ea07265de6d4e8af, type: 3}
+  leftSprite: {fileID: 21300000, guid: 6be4cd40cee12174cbe553842f1729ac, type: 3}
+  rightSprite: {fileID: 21300000, guid: 42eb05958dfb5bd48adbe5bbb4c999fe, type: 3}
   bank: {fileID: 1733882704}
   value: 1
 --- !u!4 &757778756
@@ -2140,7 +2140,7 @@ Animator:
   m_GameObject: {fileID: 1255143452}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 451d51814922d9c43b7bac4b1519bc1f, type: 2}
+  m_Controller: {fileID: 9100000, guid: 9a4e6bcb1a5dfd240957bf96fb93001a, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -2933,7 +2933,7 @@ Animator:
   m_GameObject: {fileID: 1629637404}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 451d51814922d9c43b7bac4b1519bc1f, type: 2}
+  m_Controller: {fileID: 9100000, guid: cde352e9009ac1b4c84ebdd3c27d8a64, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -3330,7 +3330,7 @@ Animator:
   m_GameObject: {fileID: 1932098232}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 451d51814922d9c43b7bac4b1519bc1f, type: 2}
+  m_Controller: {fileID: 9100000, guid: 6b74135e673e40e468179fdfe365adb0, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -3558,7 +3558,7 @@ Animator:
   m_GameObject: {fileID: 1938721467}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 451d51814922d9c43b7bac4b1519bc1f, type: 2}
+  m_Controller: {fileID: 9100000, guid: 140b3250211dd4947b04966a7c61e827, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

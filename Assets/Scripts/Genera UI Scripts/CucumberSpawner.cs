@@ -9,6 +9,8 @@ public class CucumberSpawner : MonoBehaviour
 
     private AutoCatBehaviour chosenCat;
     private int temp;
+    private float countdown;
+    private bool catsAreActive = false;
 
     private Vector2[] coords = { new Vector2(-299,-135), new Vector2(-351, 50), new Vector2(-6,139), new Vector2(343,50), new Vector2(288, -129) };
 
@@ -21,17 +23,24 @@ public class CucumberSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        
-        //make this SPICIER
-        if (Input.GetKeyDown(KeyCode.H))
+        if (!catsAreActive)
         {
             if(autoCats.autoCatCount > 0)
             {
-                PickCatToScare();
+                catsAreActive = true;
+                countdown = SetTimeTilCucumber();
             }
-           
         }
+        else
+        {
+            countdown -= Time.deltaTime;
+            if(countdown <= 0)
+            {
+                PickCatToScare();
+                countdown = SetTimeTilCucumber();
+            }
+        }
+        
     }
 
     public void CreateCucumber()
@@ -45,6 +54,13 @@ public class CucumberSpawner : MonoBehaviour
         newCucumber.GetComponent<RectTransform>().anchoredPosition = coords[temp];
         newCucumber.GetComponent<CucumberManager>().targetCat = chosenCat;
   
+    }
+
+    public float SetTimeTilCucumber()
+    {
+        float x = Random.Range(30.0F, 130.0F);
+        print(x);
+        return (x);
     }
 
     //spook the cat

@@ -22,7 +22,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 2e3762999f1a0524db20692064d9d28c, type: 2}
+  m_Motion: {fileID: 7400000, guid: 8cbb55589594b7d478c71e69aa9ba302, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -109,7 +109,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Patting Controller
+  m_Name: nemo_Controller
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: States
@@ -144,7 +144,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SalamiPatting
+  m_Name: Salami
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -159,7 +159,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 2e54a55a50fffba4eb52fa9de2d78f77, type: 2}
+  m_Motion: {fileID: 7400000, guid: a7967349f1f18204d9a1ca4457c8af01, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -237,7 +237,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 3e1a9958a3b7c5f4f877d8bb23950bc9, type: 2}
+  m_Motion: {fileID: 7400000, guid: 08a683deaa8ec144996d569ebc85a5df, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -295,7 +295,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 9cad918bb706be840a9b94aa2e85a2f0, type: 2}
+  m_Motion: {fileID: 7400000, guid: 75de9140fc5f0284b958546358b14cbf, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
