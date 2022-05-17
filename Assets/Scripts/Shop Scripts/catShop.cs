@@ -7,18 +7,37 @@ public class catShop : MonoBehaviour
 {
     public breadPatter patter;
     public Bank breadBank;
+    public catManager cats;
     public StickerStuff stickerSpawner;
     public SalamiStuff salamiSpawner;
+    
     private int catPrice = 300;
     private int upgradePrice = 2;
     private int stickerPrice = 5;
     private int salamiPrice = 32;
-    public catManager cats;
+
+    private float countdownTimer = 0;
+    private float displayCountdown;
+    
     public TextMeshProUGUI purchaseText;
     public TextMeshProUGUI upgradeText;
     public TextMeshProUGUI stickerText;
     public TextMeshProUGUI salamiText;
-   
+
+
+    void Update()
+    {
+        if(countdownTimer > 0.0F)
+        {
+            countdownTimer -= Time.deltaTime;
+            UpdateSalamiText();
+        }
+
+        if(displayCountdown < 0.0F)
+        {
+            salamiText.text = "Buy Salami:\n" + salamiPrice.ToString();
+        }
+    }
 
     public void BuyCat()
     {
@@ -65,12 +84,22 @@ public class catShop : MonoBehaviour
 
     public void BuySalami()
     {
-        if (breadBank.bread >= stickerPrice)
+        if (breadBank.bread >= stickerPrice && countdownTimer <= 0.0F)
         {
             breadBank.bread -= salamiPrice;
             salamiText.text = "Buy Salami:\n" + salamiPrice.ToString();
             salamiSpawner.SpawnSalami();
+
+            countdownTimer = 60.0F;
+
         }
     }
+
+    private void UpdateSalamiText()
+    {
+        displayCountdown = Mathf.FloorToInt(countdownTimer);
+        salamiText.text = "Please wait...\n" + displayCountdown.ToString();
+    }
+
 
 }

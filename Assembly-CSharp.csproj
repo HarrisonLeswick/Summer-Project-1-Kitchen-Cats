@@ -60,6 +60,7 @@
     <Compile Include="Assets\Scripts\Extra Scripts\DragDropScene.cs" />
     <Compile Include="Assets\Scripts\Shop Scripts\StickerStuff.cs" />
     <Compile Include="Assets\Scripts\Shop Scripts\catShop.cs" />
+    <Compile Include="Assets\Scripts\Shop Scripts\SalamiStuff.cs" />
     <Compile Include="Assets\Scripts\Genera UI Scripts\CucumberManager.cs" />
     <Compile Include="Assets\Scripts\Genera UI Scripts\CucumberSpawner.cs" />
     <Compile Include="Assets\Scripts\Cat Scripts\AutoCatBehaviour.cs" />
