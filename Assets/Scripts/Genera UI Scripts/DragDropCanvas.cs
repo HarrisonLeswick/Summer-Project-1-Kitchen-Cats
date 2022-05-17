@@ -28,10 +28,12 @@ public class DragDropCanvas : MonoBehaviour, IPointerDownHandler, IBeginDragHand
     {
         canvasGroup.alpha = 1f;
         canvasGroup.blocksRaycasts = true;
+
+        gameObject.tag = "Salami";
     }
     public void OnPointerDown(PointerEventData eventData)
     {
-        Debug.Log("On Pointer Down");
+        gameObject.tag = "Salami Prime";
     }
 
     public void OnDrop(PointerEventData eventData)

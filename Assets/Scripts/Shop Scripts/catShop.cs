@@ -8,27 +8,17 @@ public class catShop : MonoBehaviour
     public breadPatter patter;
     public Bank breadBank;
     public StickerStuff stickerSpawner;
+    public SalamiStuff salamiSpawner;
     private int catPrice = 300;
     private int upgradePrice = 2;
     private int stickerPrice = 5;
+    private int salamiPrice = 32;
     public catManager cats;
     public TextMeshProUGUI purchaseText;
     public TextMeshProUGUI upgradeText;
     public TextMeshProUGUI stickerText;
-    
-
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public TextMeshProUGUI salamiText;
+   
 
     public void BuyCat()
     {
@@ -70,6 +60,16 @@ public class catShop : MonoBehaviour
             breadBank.bread -= stickerPrice;
             stickerText.text = "Buy Sticker:\n" + stickerPrice.ToString();
             stickerSpawner.SpawnSticker();
+        }
+    }
+
+    public void BuySalami()
+    {
+        if (breadBank.bread >= stickerPrice)
+        {
+            breadBank.bread -= salamiPrice;
+            salamiText.text = "Buy Salami:\n" + salamiPrice.ToString();
+            salamiSpawner.SpawnSalami();
         }
     }
 
