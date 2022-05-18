@@ -20,6 +20,7 @@ public class AutoCatBehaviour : MonoBehaviour
     public bool hasSalami = false;
     public Bank breadBank;
     private ParticleSystem breadParticles;
+    public float salamiTimer;
 
     // Start is called before the first frame update
     void Start()
@@ -120,6 +121,15 @@ public class AutoCatBehaviour : MonoBehaviour
     void AutoSalami()
     {
         breadBank.AddBread(breadPerPat * 2 * Time.deltaTime);
+        if (salamiTimer <= 0)
+        {
+            catState = CatState.Active;
+        }
+        else 
+        {
+            salamiTimer -= Time.deltaTime;
+        }
+
     }
 
 
