@@ -18,6 +18,8 @@ public class catShop : MonoBehaviour
 
     private float countdownTimer = 0;
     private float displayCountdown;
+
+    private bool noMoreStickers = false;
     
     public TextMeshProUGUI purchaseText;
     public TextMeshProUGUI upgradeText;
@@ -74,11 +76,18 @@ public class catShop : MonoBehaviour
 
     public void BuySticker()
     {
-        if (breadBank.bread >= stickerPrice)
+        if (breadBank.bread >= stickerPrice && (!noMoreStickers))
         {
             breadBank.bread -= stickerPrice;
             stickerText.text = "Buy Sticker:\n" + stickerPrice.ToString();
-            stickerSpawner.SpawnSticker();
+            stickerSpawner.PickSticker();
+
+            if (stickerSpawner.allStickersUsed)
+            {
+                noMoreStickers = true;
+                stickerText.text = "that's a lot\nof stickers :3";
+                //summon bread bank audio
+            }
         }
     }
 

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class DragDropCanvas : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler, IDropHandler
+public class DragDropSticker : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler
 {
     [SerializeField] public Canvas canvas;
 
@@ -28,25 +28,9 @@ public class DragDropCanvas : MonoBehaviour, IPointerDownHandler, IBeginDragHand
     {
         canvasGroup.alpha = 1f;
         canvasGroup.blocksRaycasts = true;
-
-        if (gameObject.tag == "Salami Prime")
-        {
-            gameObject.tag = "Salami";
-        }
-        
     }
     public void OnPointerDown(PointerEventData eventData)
     {
-        if(gameObject.tag == "Salami")
-        {
-            gameObject.tag = "Salami Prime";
-        }
-        
-    }
 
-    public void OnDrop(PointerEventData eventData)
-    {
-        //throw new System.NotImplementedException();
     }
-
 }

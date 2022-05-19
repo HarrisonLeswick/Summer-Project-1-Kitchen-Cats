@@ -88,22 +88,6 @@ public class AutoCatBehaviour : MonoBehaviour
             print(catName + " exists i guess");
         }
 
-
-        if (Input.GetKeyDown(KeyCode.R) && catState != CatState.Active)//replace with normal state condition
-        {
-            catState = CatState.Active;
-            print(catName + " is slapping bread!");
-        }
-        else if (Input.GetKeyDown(KeyCode.E) && catState != CatState.Salami)//replace with salami condition
-        {
-            catState = CatState.Salami;
-            print(catName + " is FUELED BY THE POWER OF SALAMI!!!!!!!");
-        }
-        else if (Input.GetKeyDown(KeyCode.F) && catState != CatState.Afraid)//replace with cucumber condition
-        {
-            catState = CatState.Afraid;
-            print(catName + " is SpookedTM!");
-        }
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -123,6 +107,7 @@ public class AutoCatBehaviour : MonoBehaviour
         breadBank.AddBread(breadPerPat * 2 * Time.deltaTime);
         if (salamiTimer <= 0)
         {
+            hasSalami = false;
             catState = CatState.Active;
         }
         else 

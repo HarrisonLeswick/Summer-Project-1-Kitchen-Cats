@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 9118275358998805694}
   - component: {fileID: 1115307186074351691}
   - component: {fileID: 3116232386782718669}
-  - component: {fileID: 4469962001998314984}
+  - component: {fileID: 2863522837595449913}
   m_Layer: 5
   m_Name: soup time
   m_TagString: Untagged
@@ -31,7 +31,6 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.15, y: 0.15, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -117,7 +116,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &4469962001998314984
+--- !u!114 &2863522837595449913
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

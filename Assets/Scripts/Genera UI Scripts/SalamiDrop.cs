@@ -9,14 +9,16 @@ public class SalamiDrop : MonoBehaviour, IDropHandler
     private GameObject[] salamiHold;
     public void OnDrop(PointerEventData eventData)
     {
-        Debug.Log("OnDrop");
-        cat.hasSalami = true;
-        cat.salamiTimer = 30;
         salamiHold = GameObject.FindGameObjectsWithTag("Salami Prime");
-        if (salamiHold[0] != null)
+
+        if (salamiHold.Length > 0)
         {
+            cat.hasSalami = true;
+            cat.salamiTimer = 30;
             Destroy(salamiHold[0]);
         }
         
+
+
     }
 }
