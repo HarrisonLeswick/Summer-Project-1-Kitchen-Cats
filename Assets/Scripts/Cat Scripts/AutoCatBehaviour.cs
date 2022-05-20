@@ -16,8 +16,11 @@ public class AutoCatBehaviour : MonoBehaviour
     public CatState catState = CatState.Active;
     public string catName;
     public int breadPerPat;
+
     public bool beenCucumbered = false;
     public bool hasSalami = false;
+    public AudioSource salamiEnd;
+
     public Bank breadBank;
     private ParticleSystem breadParticles;
     public float salamiTimer;
@@ -109,6 +112,7 @@ public class AutoCatBehaviour : MonoBehaviour
         {
             hasSalami = false;
             catState = CatState.Active;
+            salamiEnd.Play();
         }
         else 
         {

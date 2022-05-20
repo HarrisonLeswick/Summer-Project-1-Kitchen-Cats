@@ -10,6 +10,7 @@ public class catShop : MonoBehaviour
     public catManager cats;
     public StickerStuff stickerSpawner;
     public SalamiStuff salamiSpawner;
+    public AudioSource purchaseSound;
     
     private int catPrice = 300;
     private int upgradePrice = 2;
@@ -59,6 +60,8 @@ public class catShop : MonoBehaviour
             {
                 purchaseText.text = "Hire " + (cats.cats[cats.autoCatCount].catName) + ":\n" + catPrice.ToString();
             }
+
+            purchaseSound.Play();
         }
     }
 
@@ -71,6 +74,8 @@ public class catShop : MonoBehaviour
             upgradePrice *= upgradePrice;
 
             upgradeText.text = "UPGRADE:\n" + upgradePrice.ToString();
+
+            purchaseSound.Play();
         }
     }
 
@@ -81,6 +86,9 @@ public class catShop : MonoBehaviour
             breadBank.bread -= stickerPrice;
             stickerText.text = "Buy Sticker:\n" + stickerPrice.ToString();
             stickerSpawner.PickSticker();
+
+            purchaseSound.Play();
+
 
             if (stickerSpawner.allStickersUsed)
             {
@@ -101,6 +109,7 @@ public class catShop : MonoBehaviour
 
             countdownTimer = 60.0F;
 
+            purchaseSound.Play();
         }
     }
 

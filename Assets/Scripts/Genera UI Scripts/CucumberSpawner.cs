@@ -6,6 +6,7 @@ public class CucumberSpawner : MonoBehaviour
 {
     public catManager autoCats;
     public GameObject cucumberPrefab;
+    public AudioSource scaredSound;
 
     private AutoCatBehaviour chosenCat;
     private int temp;
@@ -53,6 +54,8 @@ public class CucumberSpawner : MonoBehaviour
         newCucumber.name = "Cucumber";
         newCucumber.GetComponent<RectTransform>().anchoredPosition = coords[temp];
         newCucumber.GetComponent<CucumberManager>().targetCat = chosenCat;
+
+        scaredSound.Play();
   
     }
 

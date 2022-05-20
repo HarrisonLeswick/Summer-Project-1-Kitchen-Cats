@@ -6,6 +6,7 @@ using UnityEngine.EventSystems;
 public class SalamiDrop : MonoBehaviour, IDropHandler
 {
     public AutoCatBehaviour cat;
+    public AudioSource salamiSound;
     private GameObject[] salamiHold;
     public void OnDrop(PointerEventData eventData)
     {
@@ -16,6 +17,8 @@ public class SalamiDrop : MonoBehaviour, IDropHandler
             cat.hasSalami = true;
             cat.salamiTimer = 30;
             Destroy(salamiHold[0]);
+
+            salamiSound.Play();
         }
         
 

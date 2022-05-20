@@ -5,6 +5,7 @@ using UnityEngine;
 public class breadPatter : MonoBehaviour
 {
     // Start is called before the first frame update
+    public AudioSource patSound;
     public Sprite bodySprite;
     public Sprite leftSprite;
     public Sprite rightSprite;
@@ -40,6 +41,8 @@ public class breadPatter : MonoBehaviour
         }
         patCooldown = 600;
         bank.AddBread(value);
+
+        patSound.Play();
 
         breadParticles.Play();
     }
