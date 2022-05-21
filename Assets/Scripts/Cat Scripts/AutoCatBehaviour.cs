@@ -134,4 +134,9 @@ public class AutoCatBehaviour : MonoBehaviour
     {
         breadParticles.Play();
     }
+
+    public bool CanTakeSalami()
+    {
+        return ((isAsleep == false && catState == CatState.Active));
+    }
 }
