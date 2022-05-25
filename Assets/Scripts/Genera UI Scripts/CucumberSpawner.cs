@@ -13,7 +13,7 @@ public class CucumberSpawner : MonoBehaviour
     private float countdown;
     private bool catsAreActive = false;
 
-    private Vector2[] coords = { new Vector2(-299,-135), new Vector2(-351, 50), new Vector2(-6,139), new Vector2(343,50), new Vector2(288, -129) };
+    private Vector2[] coords = { new Vector2(-699, -340), new Vector2(-832, 111), new Vector2(12, 333), new Vector2(830, 123), new Vector2(701, -343) };
 
     // Start is called before the first frame update
     void Start()

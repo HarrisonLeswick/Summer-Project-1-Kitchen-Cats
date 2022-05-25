@@ -42,6 +42,7 @@ public class breadPatter : MonoBehaviour
         patCooldown = 600;
         bank.AddBread(value);
 
+        patSound = bank.GetBreadSound();
         patSound.Play();
 
         breadParticles.Play();
